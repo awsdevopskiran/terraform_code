@@ -10,7 +10,7 @@ phases:
             - echo Entered the pre_build phase..
     build:
         commands:
-            - terraform apply --autoa-pprove
+            - terraform apply --auto-approve
     post_build:
         commands:
             - echo Entered the post_build phase..
