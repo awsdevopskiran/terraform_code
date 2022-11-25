@@ -13,7 +13,7 @@ data "aws_ami" "Amazon_linux" {
 
 resource "aws_instance" "terraform_ec2_instance" {
   //count = var.instance_count
-  ami           = var.AMI_ID.id
+  ami           = var.AMI_ID
   instance_type = var.instance_type
   key_name      = "aws-devops"
 
