@@ -16,6 +16,7 @@ phases:
             - yum install -y terraform
             - terraform init
             - terraform apply --auto-approve
+            - terraform destroy --auto-approve
     post_build:
         commands:
             - echo Entered the post_build phase..
