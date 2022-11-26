@@ -10,9 +10,9 @@ phases:
             - echo Entered the pre_build phase..
     build:
         commands:
-            
-            - yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
-            - yum -y install terraform
+            - sudo yum install -y yum-utils
+            - sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+            - sudo yum install -y terraform
             - terraform apply --auto-approve
     post_build:
         commands:
